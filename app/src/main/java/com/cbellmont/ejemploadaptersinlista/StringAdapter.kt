@@ -32,10 +32,6 @@ class StringAdapter : RecyclerView.Adapter<StringAdapter.StringViewHolder>()  {
             holder.textView.setBackgroundColor(ContextCompat.getColor(holder.root.context, R.color.colorAccent))
             "Soy impar"
         }
-        if (numeroDeFilas == position) {
-            holder.textView.setBackgroundColor(ContextCompat.getColor(holder.root.context, R.color.colorPrimary))
-            holder.textView.text = "Soy el último"
-        }
     }
 
 }
