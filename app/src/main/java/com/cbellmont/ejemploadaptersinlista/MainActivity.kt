@@ -1,24 +1,20 @@
 package com.cbellmont.ejemploadaptersinlista
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_main.*
+import com.cbellmont.ejemploadaptersinlista.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var adapter : StringAdapter
+
+    lateinit var binding : ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        createRecyclerView()
-    }
-
-    private fun createRecyclerView() {
-        adapter = StringAdapter()
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = adapter
+        binding.recyclerView.layoutManager = LinearLayoutManager(this)
+        binding.recyclerView.adapter =  StringAdapter()
     }
 
 }

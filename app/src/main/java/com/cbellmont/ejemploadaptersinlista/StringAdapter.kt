@@ -32,15 +32,6 @@ class StringAdapter : RecyclerView.Adapter<StringAdapter.StringViewHolder>()  {
             holder.textView.setBackgroundColor(ContextCompat.getColor(holder.root.context, R.color.colorAccent))
             "Soy impar"
         }
-
-        if (position == itemCount -1) {
-            holder.textView.text = "Add"
-            holder.textView.setOnClickListener {
-                Toast.makeText(holder.root.context, "Adding", Toast.LENGTH_LONG).show()
-                numeroDeFilas++
-                notifyDataSetChanged()
-            }
-        }
     }
 
 }
