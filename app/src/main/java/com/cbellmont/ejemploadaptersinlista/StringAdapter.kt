@@ -12,7 +12,7 @@ class StringAdapter : RecyclerView.Adapter<StringAdapter.StringViewHolder>()  {
 
     class StringViewHolder(var root: View, var textView: TextView) : RecyclerView.ViewHolder(root)
 
-    var numeroDeFilas = 10
+    var numeroDeFilas = 5
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StringViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item, parent, false)
@@ -25,13 +25,7 @@ class StringAdapter : RecyclerView.Adapter<StringAdapter.StringViewHolder>()  {
     }
 
     override fun onBindViewHolder(holder: StringViewHolder, position: Int) {
-        holder.textView.text = if (position % 2 == 0) {
-            holder.textView.setBackgroundColor(ContextCompat.getColor(holder.root.context, R.color.colorPrimaryDark))
-            "Position = $position"
-        } else {
-            holder.textView.setBackgroundColor(ContextCompat.getColor(holder.root.context, R.color.colorAccent))
-            "Soy impar"
-        }
+        holder.textView.text = position.toString()
     }
 
 }
